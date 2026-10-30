@@ -1,3 +1,4 @@
+
 .app-layout {
   flex: 1;
   display: flex;
@@ -209,6 +210,115 @@ svg.i {
   font-weight: 600;
 }
 
+/* Hero section */
+
+.hero {
+  background: var(--g1);
+  text-align: center;
+  padding: 64px 0 0;
+  overflow: hidden;
+}
+
+.ey {
+  color: var(--red);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.35px;
+}
+
+.hero h1 {
+  font-size: 54px;
+  line-height: 1.06;
+  letter-spacing: -1.6px;
+  margin: 10px 0 14px;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 19px;
+  color: var(--g7);
+  max-width: 640px;
+  margin: 0 auto 22px;
+  line-height: 1.4;
+}
+
+.ln {
+  display: flex;
+  gap: 22px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.ln .l {
+  color: var(--red);
+  font-size: 17px;
+  background: none;
+  padding: 0;
+}
+
+.ln .l:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  background: var(--red);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 980px;
+  font-weight: 500;
+  display: inline-block;
+  text-align: center;
+  transition: 0.15s;
+}
+
+.btn:hover {
+  background: var(--red2);
+}
+
+/* Hero image - integrated with background */
+
+.stage {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+  margin-top: 34px;
+  overflow: hidden;
+  background: transparent;
+}
+
+.stage img {
+  display: block;
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  opacity: 1;
+
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 8%,
+    black 88%,
+    transparent 100%
+  );
+
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    black 8%,
+    black 88%,
+    transparent 100%
+  );
+}
+
 .trust {
   background: var(--g1);
   margin-top: 50px;
@@ -259,7 +369,22 @@ footer .wrap {
   gap: 10px;
 }
 
+/* Tablet */
+
 @media (max-width: 1000px) {
+  .hero h1 {
+    font-size: 36px;
+    letter-spacing: -0.8px;
+  }
+
+  .hero p {
+    font-size: 16.5px;
+  }
+
+  .stage {
+    height: 200px;
+  }
+
   .trust .wrap {
     grid-template-columns: 1fr 1fr;
   }
@@ -280,5 +405,27 @@ footer .wrap {
 
   .ub .wrap span:last-child {
     display: none;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .ey {
+    font-size: 12.5px;
+  }
+
+  .hero h1 {
+    font-size: 31px;
+    letter-spacing: -0.5px;
+  }
+
+  .hero p {
+    font-size: 15.5px;
+  }
+
+  .stage {
+    height: 170px;
+    margin-top: 24px;
   }
 }

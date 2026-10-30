@@ -1,5 +1,6 @@
 import Footer from './Footer'
 import Header from './Header'
+import Hero from './Hero'
 import TopUtilityBar from './TopUtilityBar'
 import TrustBar from './TrustBar'
 
@@ -8,7 +9,9 @@ function AppLayout() {
     <div className="app-layout">
       <TopUtilityBar />
       <Header />
-      <main className="site-main" />
+      <main className="site-main">
+        <Hero />
+      </main>
       <TrustBar />
       <Footer />
     </div>
