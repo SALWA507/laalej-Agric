@@ -1,6 +1,6 @@
+import { Outlet } from 'react-router-dom'
 import Footer from './Footer'
 import Header from './Header'
-import Hero from './Hero'
 import TopUtilityBar from './TopUtilityBar'
 import TrustBar from './TrustBar'
 
@@ -10,7 +10,7 @@ function AppLayout() {
       <TopUtilityBar />
       <Header />
       <main className="site-main">
-        <Hero />
+        <Outlet />
       </main>
       <TrustBar />
       <Footer />
